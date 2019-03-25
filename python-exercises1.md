@@ -5,7 +5,7 @@ These are during-workshop exercises that correspond to the [first Python script]
 
 Use Python to find the answer:
 
-![square root of 17/42 + 0.45 times 3.1](http://www.sciweavers.org/upload/Tex2Img_1553544051/render.png)
+![square root of 17/42 + 0.45 times 3.1](images/equation.png)
 
 Save the answer to a variable called result.  Print out the value of result.
 
