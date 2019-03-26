@@ -153,3 +153,27 @@ print(mylist)
 my_list[0] = "avocado"
 print(my_list)
 ```
+
+
+
+### Dictionary troubleshooting
+
+Run the following code, which produces an error:
+
+```python
+ages = {'Casey': 41, 'Henry': 4, 'Madison': 2, 'Caroline': 0, 'Brian': 36}
+ages.keys()[0]
+```
+
+Google the error to find a solution.  Ask for help if you need.
+
+
+### Dictionary of dictionaries
+
+Run the following code.  Then get the the age of patient '49283'.
+
+```python
+patients = {'38275': {'age': 42, 'admitted': '2019-01-03', test: False},
+            '49283': {'age': 45, 'admitted': '2019-02-01', test: True},
+            '92042': {'age': 34, 'admitted': '2019-01-10', test: True}}
+```
