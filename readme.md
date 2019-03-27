@@ -33,6 +33,6 @@ You can find links to additional resources in our main workshop repositories:
 
 ## Cheatsheets
 
-[Python Basics](http://www.sixthresearcher.com/python-3-reference-cheat-sheet-for-beginners/)
+[Python Basics](http://sixthresearcher.com/wp-content/uploads/2016/12/Python3_reference_cheat_sheet.pdf)
 
 [Pandas Data Wrangling](https://github.com/pandas-dev/pandas/raw/master/doc/cheatsheet/Pandas_Cheat_Sheet.pdf)
