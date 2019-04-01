@@ -5,8 +5,8 @@ These are during-workshop exercises that correspond to the [second Python script
 
 * Create a new folder Python on your Desktop
 * In Spyder, set the working directory to Desktop/Python
-* Download [Python if script - if.py](scripts/if.py?raw=true) to Desktop/Python folder
-* Open the downloaded file if.py in Spyder
+* Copy `scripts/if.py` from your download of the repository to your new Desktop/Python folder
+* Open `if.py` in Spyder
 * Run the script
 * Try to identify the error(s)
 * Add the second if statement that will check if `b` is greater than or equal to `a`
@@ -16,8 +16,8 @@ These are during-workshop exercises that correspond to the [second Python script
 
 ## If-else
 
-* Download [Python if-else script - ifelse.py](scripts/ifelse.py?raw=true) to Desktop/Python folder
-* Open the downloaded file ifelse.py in Spyder
+* Copy `scripts/ifelse.py` from your download of the repository to Desktop/Python folder
+* Open `ifelse.py` in Spyder
 * Run the script
 * Change the > sign into == and < 
 * Modify the message(s) accordingly
@@ -32,8 +32,8 @@ These are during-workshop exercises that correspond to the [second Python script
 
 ## For-indentation
 
-* Download [Python for-identation script - forindentation.py](scripts/forindentation.py?raw=true) to Desktop/Python folder
-* Open the downloaded file forindentation.py in Spyder
+* Copy `scripts/forindentation.py` from your download of the repository to Desktop/Python folder
+* Open `forindentation.py` in Spyder
 * Run the script
 * Try to identify the error(s)
 * Modify the script such that it runs without errors
