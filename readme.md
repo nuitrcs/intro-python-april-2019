@@ -20,6 +20,8 @@ In addition to the software above, you also need to download a .zip file for the
 
 Unzip this file and move the unzipped folder to your desktop.
 
+You will also need a copy of this repository.  See [these instructions](https://sites.northwestern.edu/summerworkshops/resources/downloading-from-github/) for how to download the files in this repository.
+
 
 
 # Resources
