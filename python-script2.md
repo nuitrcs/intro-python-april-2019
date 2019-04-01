@@ -62,6 +62,8 @@ Everything else evaluates to true.
 
 
 Below are some examples:
+
+**Input:**
 ```python
 print("\nExample 1\n")
 value = 3
@@ -76,6 +78,7 @@ if value < threshold: # Print statement below is skipped
 print("value = ", value, "\nthresold = ", threshold)
 ```
 
+**Output:**
 ```
 Example 1
 
@@ -116,6 +119,7 @@ Operator    Meaning
 
 Instead of using two separate `if` statements to decide which is larger we can use the `if ... else ...` construct
 
+**Input:**
 ```python
 # If ... Else ...
 
@@ -128,9 +132,11 @@ else :
     print("below threshold")
 print("value = ", value, " and threshold = ", threshold)
 ```
+
+**Output:**
 ```
-value = 4 and threshold = 5
 below threshold
+value = 4 and threshold = 5
 ```
 
 [Exercise](python-exercises2.md#if-else)
@@ -175,9 +181,9 @@ if (value >= threshold1 and value < threshold2):
   print("value is between threshold1 and threshold2")
 ```
 
-Notice that after any math and comparison operators evaluate, Python evaluates the `not` operators first, then the `and` operators, and then the `or` operators.
+Notice that after any math and comparison operators evaluate, Python evaluates the `not` operators first, then the `and` operators, and then the `or` operators.  You can use parentheses () to group statements.
 
-##The `for` loop
+## The `for` loop
 
 The Python for statement iterates over each item in a sequence.
 
@@ -219,7 +225,7 @@ for word in words:
   print(len(word))
 ```
 
-###The range() Function
+### The range() Function
 
 If you need to iterate over a sequence of numbers, the `range()` function comes in handy. It generates arithmetic progressions:
 

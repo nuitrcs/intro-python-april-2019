@@ -66,28 +66,24 @@ Let's try to solve this exercise using help.
 ---
 ## Processing data from a file
 
-teaching: 45 min
-
-exercises: 25 min
-
 Questions:
-- "How can I read and write files?"
-- "What kind of data files can I read?"
+- How can I read and write files?
+- What kind of data files can I read?
 
 Objectives:
-- "Describe a file handle"
-- "Use `open()` to open files for reading"
-- "Create and open files for writing or appending"
-- "Use `close` to close files"
-- "Explain what is meant by a record"
+- Describe a file handle
+- Use `open()` to open files for reading
+- Create and open files for writing or appending
+- Use `close` to close files
+- Explain what is meant by a record
 
 Keypoints:
-- "Reading data from files is far more common than program 'input' requests or hard coding values"
-- "Python provides simple means of reading from a text file and writing to a text file"
-- "Tabular data is commonly recorded in a 'csv' file"
-- "Text files like csv files can be thought of as being a list of strings. Each string is a complete record"
-- "You can read and write a file one record at a time"
-- "Python has builtin functions to parse (split up) records into individual tokens"
+- Reading data from files is far more common than program 'input' requests or hard coding values
+- Python provides simple means of reading from a text file and writing to a text file
+- Tabular data is commonly recorded in a 'csv' file
+- Text files like csv files can be thought of as being a list of strings. Each string is a complete record
+- You can read and write a file one record at a time
+- Python has builtin functions to parse (split up) records into individual tokens
 ---
 
 ## Reading and Writing datasets
@@ -114,15 +110,16 @@ The file we will be using is only a small file (131 data records), but the appro
 
 Other approaches to reading files will typically expect to read the whole file in one go. This can be efficient when you subsequently process the data but it require large amounts of memory to hold the entire file. We will look at this approach tomorrow when we will work with the Pandas package.
 
-For our examples in this session we are going to use the SAFI_results.csv file. This is available for download [here](https://datacarpentry.org/python-socialsci/data/SAFI_results.csv) and the description of the file is available [here](https://datacarpentry.org/python-socialsci/data/SAFI_results.csv)
+For our examples in this session we are going to use the SAFI_results.csv file. This file is included in this repository and the description of the file is available [here](https://datacarpentry.org/python-socialsci/data/SAFI_results.csv)
 
 The code assumes that the file is in the work directory and we have to make sure it is. 
 
 We will build up our programs in simple steps
 
-### Step 1 - Open the file , read through it and close the file
+### Step 1 - Open the file, read through it and close the file
 
-~~~python
+**Input:**
+```python
 filename = "SAFI_results.csv"
 f = open(filename, "r")    # open the file whose name is in filename, the 'r' means we want to read from the file
                            # the open function returns what is called a file handle. we use this to refer to the file
@@ -130,14 +127,15 @@ for line in f:             # We use a for loop to iterate through the file one l
     print(line)            # we simply print the line
 
 f.close()                    # Always close the file at the end.
-~~~
+```
 
-~~~output
+**Output:**
+```output
 Column1,A01_interview_date,A03_quest_no,A04_start,A05_end,A06_province,A07_district,A08_ward,A09_village,A11_years_farm,A12_agr_assoc,B11_remittance_money,B16_years_liv,B17_parents_liv,B18_sp_parents_liv,B19_grand_liv,B20_sp_grand_liv,B_no_membrs,C01_respondent_roof_type,C02_respondent_wall_type,C02_respondent_wall_type_other,C03_respondent_floor_type,C04_window_type,C05_buildings_in_compound,C06_rooms,C07_other_buildings,D_plots_count,E01_water_use,E17_no_enough_water,E19_period_use,E20_exper_other,E21_other_meth,E23_memb_assoc,E24_resp_assoc,E25_fees_water,E26_affect_conflicts,E_no_group_count,E_yes_group_count,F04_need_money,F05_money_source_other,F06_crops_contr,F08_emply_lab,F09_du_labour,F10_liv_owned_other,F12_poultry,F13_du_look_aftr_cows,F_liv_count,G01_no_meals,_members_count,_note,gps:Accuracy,gps:Altitude,gps:Latitude,gps:Longitude,instanceID
 
 0,17/11/2016,1,2017-03-23T09:49:57.000Z,2017-04-02T17:29:08.000Z,Province1,District1,Ward2,Village2,11,no,no,4,no,yes,no,yes,3,grass,muddaub,,earth,no,1,1,no,2,no,,,,,,,,,2,,,,,no,no,,yes,no,1,2,3,,14,698,-19.11225943,33.48345609,uuid:ec241f2c-0609-46ed-b5e8-fe575f6cefef
 ...
-~~~
+```
 
 You can think of the file as being a list of strings. Each string in the list is one complete line from the file.
 
@@ -151,7 +149,8 @@ As we read the file the line variable is a string containing a complete record. 
 
 As line is a string we can use the `split()` method to convert it to a list of column values. We are specicically going to select the column which is the 19th entry in the list (remember the list index starts at 0). This refers to the C01_respondent_roof_type column. We are going to examine the different roof types.
 
-~~~python
+**Input:**
+```python
 filename = "SAFI_results.csv"
 f = open(filename, "r") # equivalent to with open(filename, "r") as f:
 
@@ -162,9 +161,10 @@ for line in f:
     print(line.split(",")[18])    # index 18, the 19th column is C01_respondent_roof_type
 
 f.close()
-~~~
+```
 
-~~~output
+**Output:**
+```output
 grass
 grass
 mabatisloping
@@ -174,14 +174,15 @@ grass
 grass
 mabatisloping
 ...
-~~~
+```
 
 
 Having a list of the roof types from all of the records is one thing, but it is more likely that we would want a count of each type. By scanning up and down the previous output, there appears to be 3 different type, but we will play safe and assume there may be more.
 
 ### Step 3 - How many of each different roof types are there?
 
-~~~python
+**Input:**
+```python
 # 1
 filename = "SAFI_results.csv"
 f = open(filename, "r")
@@ -215,15 +216,15 @@ print("There are ", grass_roof, " grass roofs")
 print("There are ", mabatisloping_roof, " mabatisloping roofs")
 print("There are ", mabatipitched_roof, " mabatipitchedg roofs")
 print("There are ", roof_type_other, " other roof types")
-~~~
+```
 
-
-~~~output
+**Output:**
+```output
 There are 73 grass roofs
 There are 48 mabatisloping roofs
 There are 10 mabatipitchedg roofs
 There are 0 other roof types
-~~~
+```
 
 What are we  doing here?
 
