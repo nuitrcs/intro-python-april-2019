@@ -129,7 +129,6 @@ $ ls
  MicrosoftEdgeBackups/
  Music/
 'My Documents'@
- myfile.py
  NetHood@
  NTUSER.DAT
  ntuser.dat.LOG1
@@ -148,7 +147,6 @@ $ ls
  SendTo@
 'Start Menu'@
  Templates@
- Untitled.ipynb
  Videos/
 ~~~
 
@@ -184,7 +182,6 @@ $ ls -F
  MicrosoftEdgeBackups/
  Music/
 'My Documents'@
- myfile.py
  NetHood@
  NTUSER.DAT
  ntuser.dat.LOG1
@@ -203,7 +200,6 @@ $ ls -F
  SendTo@
 'Start Menu'@
  Templates@
- Untitled.ipynb
  Videos/
 ~~~
 
