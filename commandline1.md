@@ -136,7 +136,6 @@ dri9634@DSSLOAN MINGW64 ~$ ls -F
  MicrosoftEdgeBackups/
  Music/
 'My Documents'@
- myfile.py
  NetHood@
  NTUSER.DAT
  ntuser.dat.LOG1
@@ -155,7 +154,6 @@ dri9634@DSSLOAN MINGW64 ~$ ls -F
  SendTo@
 'Start Menu'@
  Templates@
- Untitled.ipynb
  Videos/
 dri9634@DSSLOAN MINGW64 ~$
 ~~~
